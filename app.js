@@ -281,3 +281,24 @@ gsap.utils.toArray(".service-card").forEach(card=>{
     });
 
 });
+gsap.utils.toArray(".portfolio-card").forEach(card=>{
+
+    gsap.from(card,{
+
+        scrollTrigger:{
+
+            trigger:card,
+
+            start:"top 85%"
+
+        },
+
+        opacity:0,
+
+        y:100,
+
+        duration:1
+
+    });
+
+});
