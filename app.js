@@ -232,3 +232,31 @@ duration:1
 });
 
 });
+window.addEventListener("scroll",()=>{
+
+const scroll=
+
+window.scrollY/
+
+(document.body.scrollHeight-window.innerHeight);
+
+document.querySelector(".progress-bar")
+
+.style.width=(scroll*100)+"%";
+
+});
+const cursor=document.querySelector(".cursor");
+
+window.addEventListener("mousemove",(e)=>{
+
+gsap.to(cursor,{
+
+x:e.clientX,
+
+y:e.clientY,
+
+duration:.08
+
+});
+
+});
