@@ -1858,3 +1858,26 @@ gap:40px;
 }
 
 }
+/*======================================
+RESPONSIVE
+======================================*/
+
+/* Laptop */
+@media (max-width:1200px){
+
+}
+
+/* Tablet */
+@media (max-width:991px){
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+}
+
+/* Small Mobile */
+@media (max-width:576px){
+
+}
