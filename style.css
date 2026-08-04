@@ -1593,3 +1593,141 @@ FAQ
     line-height:1.8;
 
 }
+/*==========================
+CTA
+==========================*/
+
+.cta{
+
+    padding:140px 0;
+
+}
+.cta-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:90px 70px;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #4F8CFF,
+        #6D5EF8,
+        #9C4DFF
+    );
+
+}
+.cta-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    filter:blur(80px);
+
+    top:-180px;
+
+    right:-120px;
+
+}
+.cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+}
+.cta-content span{
+
+    letter-spacing:2px;
+
+    color:#dbeafe;
+
+    font-size:14px;
+
+}
+.cta-content h2{
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    margin:25px 0;
+
+}
+.cta-content p{
+
+    color:rgba(255,255,255,.9);
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+.cta-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+.btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 32px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#111;
+
+}
+@media(max-width:768px){
+
+.cta-box{
+
+padding:60px 35px;
+
+}
+
+.cta-content h2{
+
+font-size:40px;
+
+}
+
+}
