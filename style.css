@@ -1385,3 +1385,124 @@ grid-template-columns:1fr;
 }
 
 }
+/*==========================
+PRICING
+==========================*/
+
+.pricing{
+
+    padding:140px 0;
+
+}
+
+.pricing-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+.pricing-card{
+
+    position:relative;
+
+    padding:45px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+}
+.pricing-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#4F8CFF;
+
+}
+.popular{
+
+    border:2px solid #4F8CFF;
+
+}
+.badge{
+
+    position:absolute;
+
+    top:-15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#4F8CFF;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+.price{
+
+    font-size:50px;
+
+    font-weight:bold;
+
+    margin:25px 0;
+
+}
+.price span{
+
+    font-size:22px;
+
+}
+.pricing-card ul{
+
+    list-style:none;
+
+    margin-bottom:35px;
+
+}
+.pricing-card ul li{
+
+    margin-bottom:15px;
+
+    color:var(--text);
+
+}
+@media(max-width:991px){
+
+.pricing-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.pricing-note{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:#9CA3AF;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
