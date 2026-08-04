@@ -414,3 +414,63 @@ gsap.utils.toArray(".pricing-card").forEach(card=>{
     });
 
 });
+//=====================================
+// FAQ Accordion
+//=====================================
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+    const button = item.querySelector(".faq-question");
+
+    button.addEventListener("click", () => {
+
+        faqItems.forEach(other => {
+
+            if(other !== item){
+
+                other.classList.remove("active");
+
+                other.querySelector(".faq-answer").style.maxHeight = null;
+
+            }
+
+        });
+
+        item.classList.toggle("active");
+
+        const answer = item.querySelector(".faq-answer");
+
+        if(item.classList.contains("active")){
+
+            answer.style.maxHeight = answer.scrollHeight + "px";
+
+        }else{
+
+            answer.style.maxHeight = null;
+
+        }
+
+    });
+
+});
+gsap.from(".faq-item",{
+
+    scrollTrigger:{
+
+        trigger:".faq-wrapper",
+
+        start:"top 80%"
+
+    },
+
+    opacity:0,
+
+    y:60,
+
+    stagger:.15,
+
+    duration:.8
+
+});
