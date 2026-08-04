@@ -7,14 +7,20 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
+        .bg-blob { animation: pulse-slow 8s infinite ease-in-out; }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white">
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden">
 
     <!-- ================= NAVBAR ================= -->
-    <header class="fixed top-0 inset-x-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60">
+    <header class="fixed top-0 inset-x-0 z-50 bg-slate-950/85 backdrop-blur-xl border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#home" class="text-xl font-black tracking-tight flex items-center gap-2">
-                <span class="text-white">Nexora</span><span class="text-blue-500">Studio</span>
+                <span class="text-white">Nexora</span><span class="text-blue-500">Studio.</span>
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-400">
@@ -35,122 +41,127 @@
     </header>
 
     <!-- ================= HERO SECTION ================= -->
-    <section id="home" class="pt-36 pb-24 px-6 relative overflow-hidden bg-gradient-to-b from-blue-950/30 via-slate-950 to-slate-950">
-        <div class="absolute w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -top-20 -left-20 pointer-events-none"></div>
+    <section id="home" class="pt-40 pb-28 px-6 relative overflow-hidden bg-slate-950">
+        <div class="absolute w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] -top-32 -left-32 bg-blob pointer-events-none"></div>
+        <div class="absolute w-[400px] h-[400px] bg-indigo-600/15 rounded-full blur-[120px] top-1/2 -right-32 bg-blob pointer-events-none"></div>
+        
         <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
-            <span class="inline-block bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[11px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
-                🚀 Solusi Digital Bisnis No. 1
+            <span class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[11px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Next-Gen Digital Agency
             </span>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight">
-                We Build <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Modern</span> Websites That Grow Your Business.
+            <h1 class="text-4xl md:text-7xl font-black tracking-tight text-white leading-[1.1]">
+                We Build <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">Modern</span> Websites That Grow Your Business.
             </h1>
             <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-                Nexora Studio membantu bisnis tampil profesional melalui website super cepat, berdesain futuristis, ramah SEO, dan terbukti meningkatkan konversi penjualan.
+                Nexora Studio mentransformasi bisnis Anda menjadi brand berkelas tinggi melalui website super cepat, berdesain futuristis, dan dirancang khusus untuk melipatgandakan omzet penjualan.
             </p>
-            <div class="flex justify-center gap-4 pt-4">
-                <a href="#portfolio" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition">Lihat Portfolio</a>
-                <a href="#calculator" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-bold px-6 py-3.5 rounded-xl transition">Hitung Estimasi Harga</a>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#portfolio" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-7 py-4 rounded-xl shadow-xl shadow-blue-600/30 transition flex items-center gap-2">Explore Portfolio <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                <a href="#calculator" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white text-xs font-bold px-7 py-4 rounded-xl transition">Hitung Estimasi Harga</a>
             </div>
         </div>
     </section>
 
     <!-- ================= STATS SECTION ================= -->
-    <section class="py-12 border-y border-slate-900 bg-slate-900/40">
+    <section class="py-12 border-y border-slate-900/80 bg-slate-900/20 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
+            <div class="space-y-1">
                 <h3 class="text-3xl font-black text-white">150+</h3>
-                <p class="text-xs text-slate-400 mt-1">Projects Completed</p>
+                <p class="text-xs text-slate-400 font-medium">Projects Completed</p>
             </div>
-            <div>
+            <div class="space-y-1">
                 <h3 class="text-3xl font-black text-white">98%</h3>
-                <p class="text-xs text-slate-400 mt-1">Happy Clients</p>
+                <p class="text-xs text-slate-400 font-medium">Happy Clients</p>
             </div>
-            <div>
+            <div class="space-y-1">
                 <h3 class="text-3xl font-black text-white">5+</h3>
-                <p class="text-xs text-slate-400 mt-1">Years Experience</p>
+                <p class="text-xs text-slate-400 font-medium">Years Experience</p>
             </div>
-            <div>
+            <div class="space-y-1">
                 <h3 class="text-3xl font-black text-white">24/7</h3>
-                <p class="text-xs text-slate-400 mt-1">Support & Maintenance</p>
+                <p class="text-xs text-slate-400 font-medium">Support & Maintenance</p>
             </div>
         </div>
     </section>
 
     <!-- ================= ABOUT SECTION ================= -->
-    <section id="about" class="py-24 px-6">
+    <section id="about" class="py-28 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-4">
-                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">WHO WE ARE</span>
-                <h2 class="text-3xl font-black text-white">Crafting Digital Excellence With Purpose & Passion.</h2>
+            <div class="space-y-6">
+                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-md border border-blue-500/20">WHO WE ARE</span>
+                <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">Crafting Digital Excellence With Purpose & Passion.</h2>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    Kami adalah tim developer dan desainer profesional yang fokus menghadirkan solusi web berstandar tinggi. Setiap project dikerjakan dengan detail untuk memastikan performa maksimal dan mendongkrak brand value bisnis Anda.
+                    Kami adalah tim perancang digital dan developer berpengalaman yang fokus pada kualitas visual, kecepatan website, serta konversi bisnis yang optimal. Setiap baris kode yang kami buat dioptimalkan khusus untuk kesuksesan brand Anda.
                 </p>
                 <div class="grid grid-cols-2 gap-4 pt-2">
-                    <div class="flex items-center gap-2 text-xs text-slate-300 font-semibold"><i class="fa-solid fa-circle-check text-blue-500"></i> Desain Custom & Unik</div>
-                    <div class="flex items-center gap-2 text-xs text-slate-300 font-semibold"><i class="fa-solid fa-circle-check text-blue-500"></i> SEO Friendly</div>
-                    <div class="flex items-center gap-2 text-xs text-slate-300 font-semibold"><i class="fa-solid fa-circle-check text-blue-500"></i> Super Cepat & Aman</div>
-                    <div class="flex items-center gap-2 text-xs text-slate-300 font-semibold"><i class="fa-solid fa-circle-check text-blue-500"></i> Garansi 1 Tahun</div>
+                    <div class="flex items-center gap-2.5 text-xs text-slate-300 font-semibold"><i class="fa-solid fa-check-circle text-blue-500 text-sm"></i> Desain Custom & Unik</div>
+                    <div class="flex items-center gap-2.5 text-xs text-slate-300 font-semibold"><i class="fa-solid fa-check-circle text-blue-500 text-sm"></i> SEO Friendly</div>
+                    <div class="flex items-center gap-2.5 text-xs text-slate-300 font-semibold"><i class="fa-solid fa-check-circle text-blue-500 text-sm"></i> Super Cepat & Aman</div>
+                    <div class="flex items-center gap-2.5 text-xs text-slate-300 font-semibold"><i class="fa-solid fa-check-circle text-blue-500 text-sm"></i> Garansi Maintenance</div>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-blue-900/30 to-slate-900 border border-slate-800 p-8 rounded-3xl relative">
+            <div class="bg-gradient-to-br from-blue-950/40 to-slate-900 border border-slate-800/80 p-8 md:p-10 rounded-3xl relative shadow-2xl">
+                <div class="absolute -top-4 -right-4 bg-blue-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-full shadow-lg">100% Responsive</div>
                 <div class="space-y-4">
-                    <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl"><i class="fa-solid fa-rocket"></i></div>
-                    <h3 class="text-xl font-bold text-white">Siap Mendigitalisasikan Bisnis Anda?</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Jangan biarkan kompetitor Anda melangkah lebih jauh. Mulai buat website impian Anda hari ini bersama Nexora Studio.</p>
+                    <div class="w-14 h-14 bg-blue-600/20 border border-blue-500/30 text-blue-400 rounded-2xl flex items-center justify-center font-bold text-2xl"><i class="fa-solid fa-microchip"></i></div>
+                        <h3 class="text-xl font-bold text-white">Teknologi Web Terkini</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Kami membangun website menggunakan stack modern yang menjamin performa super ngebut, aman dari peretasan, dan mudah dikembangkan di masa depan.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ================= SERVICES SECTION ================= -->
-    <section id="services" class="py-24 px-6 border-t border-slate-900 bg-slate-950/50">
+    <section id="services" class="py-28 px-6 border-t border-slate-900 bg-slate-950/60">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="text-center space-y-3">
-                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">WHAT WE DO</span>
+                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-md border border-blue-500/20">WHAT WE DO</span>
                 <h2 class="text-3xl font-black text-white">Our Core Services</h2>
+                <p class="text-slate-400 text-xs max-w-sm mx-auto">Layanan profesional komprehensif untuk mendongkrak performa digital bisnis Anda.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-blue-500/50 transition">
-                    <div class="w-12 h-12 bg-blue-600/10 text-blue-500 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-code"></i></div>
+                <div class="bg-slate-900/40 border border-slate-800/80 p-8 rounded-3xl space-y-4 hover:border-blue-500/50 hover:bg-slate-900/80 transition duration-300 group">
+                    <div class="w-12 h-12 bg-blue-600/10 text-blue-400 rounded-2xl flex items-center justify-center text-xl font-bold group-hover:scale-110 transition"><i class="fa-solid fa-code"></i></div>
                     <h3 class="text-lg font-bold text-white">Web Development</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Pembuatan Company Profile, Toko Online (E-Commerce), hingga Web Aplikasi custom sesuai kebutuhan.</p>
+                    <p class="text-xs text-slate-400 leading-relaxed">Website modern berkecepatan tinggi, responsif, dan ramah SEO untuk mendongkrak kredibilitas bisnis.</p>
                 </div>
-                <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-blue-500/50 transition">
-                    <div class="w-12 h-12 bg-blue-600/10 text-blue-500 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-pen-nib"></i></div>
+                <div class="bg-slate-900/40 border border-slate-800/80 p-8 rounded-3xl space-y-4 hover:border-blue-500/50 hover:bg-slate-900/80 transition duration-300 group">
+                    <div class="w-12 h-12 bg-indigo-600/10 text-indigo-400 rounded-2xl flex items-center justify-center text-xl font-bold group-hover:scale-110 transition"><i class="fa-solid fa-pen-nib"></i></div>
                     <h3 class="text-lg font-bold text-white">UI/UX Design</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Perancangan antarmuka digital yang memukau dan ramah pengguna untuk pengalaman terbaik.</p>
+                    <p class="text-xs text-slate-400 leading-relaxed">Desain antarmuka elegan berbasis riset pengguna agar interaksi digital terasa intuitif dan memukau.</p>
                 </div>
-                <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-blue-500/50 transition">
-                    <div class="w-12 h-12 bg-blue-600/10 text-blue-500 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="text-lg font-bold text-white">Digital Marketing & SEO</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Optimasi mesin pencari agar website Anda mudah ditemukan di halaman pertama Google.</p>
+                <div class="bg-slate-900/40 border border-slate-800/80 p-8 rounded-3xl space-y-4 hover:border-blue-500/50 hover:bg-slate-900/80 transition duration-300 group">
+                    <div class="w-12 h-12 bg-purple-600/10 text-purple-400 rounded-2xl flex items-center justify-center text-xl font-bold group-hover:scale-110 transition"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="text-lg font-bold text-white">Digital Marketing</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Strategi pemasaran digital terukur untuk memperluas jangkauan pasar dan meningkatkan penjualan secara efektif.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ================= PORTFOLIO SECTION ================= -->
-    <section id="portfolio" class="py-24 px-6 border-t border-slate-900">
+    <section id="portfolio" class="py-28 px-6 border-t border-slate-900">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="text-center space-y-3">
-                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">OUR PORTFOLIO</span>
+                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-md border border-blue-500/20">OUR PORTFOLIO</span>
                 <h2 class="text-3xl font-black text-white">Featured Projects</h2>
                 <p class="text-slate-400 text-xs max-w-md mx-auto">Beberapa project pilihan yang telah kami kerjakan untuk berbagai jenis bisnis.</p>
             </div>
 
             <!-- Filter Kategori -->
             <div class="flex flex-wrap justify-center gap-2">
-                <button onclick="filterProject('all')" class="filter-btn active bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-xl transition">All Projects</button>
-                <button onclick="filterProject('Company Profile')" class="filter-btn bg-slate-900 text-slate-400 hover:text-white text-xs font-bold px-4 py-2 rounded-xl border border-slate-800 transition">Company Profile</button>
-                <button onclick="filterProject('Landing Page')" class="filter-btn bg-slate-900 text-slate-400 hover:text-white text-xs font-bold px-4 py-2 rounded-xl border border-slate-800 transition">Landing Page</button>
-                <button onclick="filterProject('Dashboard')" class="filter-btn bg-slate-900 text-slate-400 hover:text-white text-xs font-bold px-4 py-2 rounded-xl border border-slate-800 transition">Dashboard</button>
-                <button onclick="filterProject('E-Commerce')" class="filter-btn bg-slate-900 text-slate-400 hover:text-white text-xs font-bold px-4 py-2 rounded-xl border border-slate-800 transition">E-Commerce</button>
+                <button onclick="filterProject('all')" class="filter-btn active bg-blue-600 text-white text-xs font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/20 transition">All Projects</button>
+                <button onclick="filterProject('Company Profile')" class="filter-btn bg-slate-900 text-slate-400 hover:text-white text-xs font-bold px-5 py-2.5 rounded-xl border border-slate-800 transition">Company Profile</button>
+                <button onclick="filterProject('Landing Page')" class="filter-btn bg-slate-900 text-slate-400 hover:text-white text-xs font-bold px-5 py-2.5 rounded-xl border border-slate-800 transition">Landing Page</button>
+                <button onclick="filterProject('Dashboard')" class="filter-btn bg-slate-900 text-slate-400 hover:text-white text-xs font-bold px-5 py-2.5 rounded-xl border border-slate-800 transition">Dashboard</button>
+                <button onclick="filterProject('E-Commerce')" class="filter-btn bg-slate-900 text-slate-400 hover:text-white text-xs font-bold px-5 py-2.5 rounded-xl border border-slate-800 transition">E-Commerce</button>
             </div>
 
             <!-- Grid Project -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="project-grid">
-                <div class="project-card bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition" data-category="Company Profile">
-                    <div class="h-48 bg-gradient-to-br from-blue-900/40 to-slate-900 flex items-center justify-center">
+                <div class="project-card bg-slate-900/50 border border-slate-800/80 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition duration-300" data-category="Company Profile">
+                    <div class="h-48 bg-gradient-to-br from-blue-900/30 to-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition"></div>
                         <i class="fa-solid fa-building text-5xl text-blue-500/40 group-hover:scale-110 transition duration-500"></i>
                     </div>
                     <div class="p-6 space-y-3">
@@ -161,8 +172,9 @@
                     </div>
                 </div>
 
-                <div class="project-card bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition" data-category="Landing Page">
-                    <div class="h-48 bg-gradient-to-br from-indigo-900/40 to-slate-900 flex items-center justify-center">
+                <div class="project-card bg-slate-900/50 border border-slate-800/80 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition duration-300" data-category="Landing Page">
+                    <div class="h-48 bg-gradient-to-br from-indigo-900/30 to-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition"></div>
                         <i class="fa-solid fa-plane text-5xl text-indigo-500/40 group-hover:scale-110 transition duration-500"></i>
                     </div>
                     <div class="p-6 space-y-3">
@@ -173,8 +185,9 @@
                     </div>
                 </div>
 
-                <div class="project-card bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition" data-category="Dashboard">
-                    <div class="h-48 bg-gradient-to-br from-purple-900/40 to-slate-900 flex items-center justify-center">
+                <div class="project-card bg-slate-900/50 border border-slate-800/80 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition duration-300" data-category="Dashboard">
+                    <div class="h-48 bg-gradient-to-br from-purple-900/30 to-slate-900 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition"></div>
                         <i class="fa-solid fa-chart-pie text-5xl text-purple-500/40 group-hover:scale-110 transition duration-500"></i>
                     </div>
                     <div class="p-6 space-y-3">
@@ -187,21 +200,19 @@
             </div>
         </div>
     </section>
-
-    <!-- ================= FITUR CANGGIH: KALKULATOR ESTIMASI HARGA ================= -->
-    <section id="calculator" class="py-24 px-6 border-t border-slate-900 bg-slate-900/30">
-        <div class="max-w-3xl mx-auto bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl space-y-8">
+    <!-- ================= KALKULATOR HARGA ================= -->
+    <section id="calculator" class="py-28 px-6 border-t border-slate-900 bg-slate-900/20">
+        <div class="max-w-3xl mx-auto bg-slate-900/80 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 md:p-10 shadow-2xl space-y-8">
             <div class="text-center space-y-2">
-                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">INTERACTIVE TOOL</span>
-                <h2 class="text-2xl font-black text-white">Kalkulator Estimasi Biaya Website</h2>
+                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-md border border-blue-500/20">INTERACTIVE TOOL</span>
+                <h2 class="text-2xl md:text-3xl font-black text-white">Kalkulator Estimasi Biaya Website</h2>
                 <p class="text-xs text-slate-400">Pilih kebutuhan website Anda untuk melihat perkiraan anggaran secara instan.</p>
             </div>
 
             <div class="space-y-6 text-xs font-semibold">
-                <!-- Pilihan Jenis Website -->
                 <div>
                     <label class="block text-slate-300 mb-2">1. Pilih Jenis Website</label>
-                    <select id="calc-type" onchange="hitungHarga()" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl p-3 text-sm focus:outline-none focus:border-blue-500">
+                    <select id="calc-type" onchange="hitungHarga()" class="w-full bg-slate-950 border border-slate-700/80 text-white rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-500 transition">
                         <option value="1500000">Company Profile (Rp 1.500.000)</option>
                         <option value="2500000">Landing Page Bisnis (Rp 2.500.000)</option>
                         <option value="4500000">Toko Online / E-Commerce (Rp 4.500.000)</option>
@@ -209,65 +220,31 @@
                     </select>
                 </div>
 
-                <!-- Pilihan Kecepatan / Tambahan -->
                 <div>
                     <label class="block text-slate-300 mb-2">2. Kecepatan Pengerjaan</label>
-                    <select id="calc-speed" onchange="hitungHarga()" class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl p-3 text-sm focus:outline-none focus:border-blue-500">
+                    <select id="calc-speed" onchange="hitungHarga()" class="w-full bg-slate-950 border border-slate-700/80 text-white rounded-xl p-3.5 text-sm focus:outline-none focus:border-blue-500 transition">
                         <option value="0">Normal (7 - 14 Hari)</option>
                         <option value="1000000">Express Kilat (3 - 5 Hari) [+Rp 1.000.000]</option>
                     </select>
                 </div>
 
-                <!-- Total Estimasi -->
-                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex items-center justify-between">
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div>
                         <p class="text-slate-400 text-xs">Estimasi Total Biaya:</p>
-                        <h3 id="calc-total" class="text-2xl font-black text-blue-400 mt-1">Rp 1.500.000</h3>
+                        <h3 id="calc-total" class="text-2xl md:text-3xl font-black text-blue-400 mt-1">Rp 1.500.000</h3>
                     </div>
-                    <button onclick="pesanViaWhatsApp()" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-5 py-3 rounded-xl transition flex items-center gap-2">
+                    <button onclick="pesanViaWhatsApp()" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-sm"></i> Pesan Sekarang
                     </button>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- ================= TESTIMONI KLIEN ================= -->
-    <section class="py-24 px-6 border-t border-slate-900">
-        <div class="max-w-7xl mx-auto space-y-12">
-            <div class="text-center space-y-3">
-                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">TESTIMONIALS</span>
-                <h2 class="text-3xl font-black text-white">Apa Kata Klien Kami?</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4">
-                    <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-xs text-slate-300 italic">"Pengerjaan sangat cepat dan hasilnya luar biasa elegan. Penjualan toko online kami naik drastis setelah pakai website dari Nexora!"</p>
-                    <div>
-                        <h4 class="font-bold text-white text-xs">Budi Santoso</h4>
-                        <p class="text-[10px] text-slate-400">Owner Fashion Store</p>
-                    </div>
-                </div>
-                <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4">
-                    <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-xs text-slate-300 italic">"Pelayanan ramah, konsultasi gratis, dan websitenya ringan banget saat diakses di HP. Sangat recommended!"</p>
-                    <div>
-                        <h4 class="font-bold text-white text-xs">Siti Aminah</h4>
-                        <p class="text-[10px] text-slate-400">Founder Travel Agency</p>
-                    </div>
-                </div>
-                <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4">
-                    <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-xs text-slate-300 italic">"Pelayanan ramah, konsultasi gratis, dan websitenya ringan banget saat diakses di HP. Sangat recommended!"</p>
-                    <div>
-                        <h4 class="font-bold text-white text-xs">Siti Aminah</h4>
-                        <p class="text-[10px] text-slate-400">Founder Travel Agency</p>
-                    </div>
-                </div>
-                <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl space-y-4">
-                    <div class="text-amber-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-xs text-slate-300 italic">"Company profile perusahaan kami jadi terlihat jauh lebih profesional di mata klien berkat Nexora Studio."</p>
-                    <div>
+    </div>
+                <div class="bg-slate-900/40 border border-slate-800/80 p-8 rounded-3xl space-y-4 hover:border-blue-500/40 transition">
+                    <div class="text-amber-400 text-xs flex gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="text-xs text-slate-300 italic leading-relaxed">"Company profile perusahaan kami jadi terlihat jauh lebih profesional di mata klien berkat Nexora Studio."</p>
+                    <div class="pt-2 border-t border-slate-800/80">
                         <h4 class="font-bold text-white text-xs">Ahmad Fauzi</h4>
                         <p class="text-[10px] text-slate-400">Direktur PT. Sukses Mandiri</p>
                     </div>
@@ -277,37 +254,44 @@
     </section>
 
     <!-- ================= CONTACT SECTION ================= -->
-    <section id="contact" class="py-24 px-6 border-t border-slate-900 bg-slate-950/50">
-        <div class="max-w-xl mx-auto space-y-8">
+    <section id="contact" class="py-28 px-6 border-t border-slate-900 bg-slate-950/60">
+        <div class="max-w-xl mx-auto space-y-8 bg-slate-900/40 border border-slate-800/80 p-8 md:p-10 rounded-3xl shadow-2xl">
             <div class="text-center space-y-3">
-                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider">GET IN TOUCH</span>
-                <h2 class="text-3xl font-black text-white">Mulai Konsultasi Gratis</h2>
+                <span class="text-blue-500 text-xs font-bold uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-md border border-blue-500/20">GET IN TOUCH</span>
+                <h2 class="text-2xl md:text-3xl font-black text-white">Mulai Konsultasi Gratis</h2>
                 <p class="text-xs text-slate-400">Punya pertanyaan atau ingin custom website? Hubungi kami sekarang.</p>
             </div>
             <form onsubmit="kirimPesanForm(event)" class="space-y-4 text-xs font-semibold">
                 <div>
-                    <label class="block text-slate-400 mb-1">Nama Lengkap</label>
-                    <input type="text" id="form-nama" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500" placeholder="Nama Anda">
+                    <label class="block text-slate-400 mb-1.5">Nama Lengkap</label>
+                    <input type="text" id="form-nama" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="Nama Anda">
                 </div>
                 <div>
-                    <label class="block text-slate-400 mb-1">Nomor WhatsApp</label>
-                    <input type="text" id="form-wa" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500" placeholder="08123456789">
+                    <label class="block text-slate-400 mb-1.5">Nomor WhatsApp</label>
+                    <input type="text" id="form-wa" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="08123456789">
                 </div>
                 <div>
-                    <label class="block text-slate-400 mb-1">Detail Kebutuhan Website</label>
-                    <textarea id="form-pesan" rows="4" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500" placeholder="Ceritakan website seperti apa yang ingin Anda buat..."></textarea>
+                    <label class="block text-slate-400 mb-1.5">Detail Kebutuhan Website</label>
+                    <textarea id="form-pesan" rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition resize-none" placeholder="Ceritakan website seperti apa yang ingin Anda buat..."></textarea>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-blue-600/30">Kirim Pesan via WhatsApp</button>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl text-sm transition shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2">Kirim Pesan via WhatsApp <i class="fa-brands fa-whatsapp text-base"></i></button>
             </form>
         </div>
     </section>
-    <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-2xl p-6 space-y-4 relative shadow-2xl">
-            <button onclick="tutupDetail()" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            <span id="modalKategori" class="text-[10px] font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-2.5 py-1 rounded-md"></span>
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-8 border-t border-slate-900 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Nexora Studio. All rights reserved. Jasa Pembuatan Website Profesional.</p>
+    </footer>
+
+    <!-- ================= MODAL DETAIL PROJECT (DIPERBAIKI POSISINYA) ================= -->
+    <div id="projectModal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-3xl p-6 md:p-8 space-y-4 relative shadow-2xl transform transition-all">
+            <button onclick="tutupDetail()" class="absolute top-5 right-5 text-slate-400 hover:text-white transition w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center"><i class="fa-solid fa-xmark text-sm"></i></button>
+            <span id="modalKategori" class="inline-block text-[10px] font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-md border border-blue-500/20"></span>
             <h3 id="modalJudul" class="text-xl font-black text-white"></h3>
             <p id="modalDeskripsi" class="text-xs text-slate-400 leading-relaxed"></p>
             <div class="pt-4 flex justify-end">
-                <button onclick="tutupDetail()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition">Tutup</button>
+                <button onclick="tutupDetail()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition">Tutup Detail</button>
             </div>
         </div>
     </div>
@@ -318,11 +302,11 @@
         function filterProject(kategori) {
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/20');
                 btn.classList.add('bg-slate-900', 'text-slate-400', 'border', 'border-slate-800');
             });
             event.target.classList.remove('bg-slate-900', 'text-slate-400', 'border', 'border-slate-800');
-            event.target.classList.add('bg-blue-600', 'text-white');
+            event.target.classList.add('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-600/20');
 
             const cards = document.querySelectorAll('.project-card');
             cards.forEach(card => {
@@ -333,17 +317,21 @@
                 }
             });
         }
-
-        // Modal Project Detail
+        // Modal Project Detail (Menggunakan flex agar pas di tengah layar)
         function bukaDetail(judul, kategori, deskripsi) {
             document.getElementById('modalJudul').innerText = judul;
             document.getElementById('modalKategori').innerText = kategori;
             document.getElementById('modalDeskripsi').innerText = deskripsi;
-            document.getElementById('projectModal').classList.remove('hidden');
+            
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
         }
 
         function tutupDetail() {
-            document.getElementById('projectModal').classList.add('hidden');
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
         }
 
         // Kalkulator Harga Otomatis
