@@ -476,3 +476,47 @@ display:none;
 }
 
 }
+.progress-bar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:3px;
+
+width:0;
+
+background:linear-gradient(90deg,#4F8CFF,#22D3EE);
+
+z-index:99999;
+
+}
+.cursor{
+
+position:fixed;
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+background:#4F8CFF;
+
+pointer-events:none;
+
+mix-blend-mode:screen;
+
+z-index:99999;
+
+transition:.05s;
+
+box-shadow:
+
+0 0 30px #4F8CFF,
+
+0 0 60px #22D3EE;
+
+}
