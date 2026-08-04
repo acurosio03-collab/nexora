@@ -1107,3 +1107,92 @@ grid-column:unset;
 }
 
 }
+/*==========================
+PROCESS
+==========================*/
+
+.process{
+    padding:140px 0;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:70px;
+}
+
+.process-card{
+    position:relative;
+    padding:40px 30px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    backdrop-filter:blur(20px);
+    transition:.35s;
+}
+
+.process-card:hover{
+    transform:translateY(-10px);
+    border-color:#4F8CFF;
+}
+.number{
+
+    position:absolute;
+
+    top:25px;
+
+    right:25px;
+
+    font-size:50px;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.06);
+
+}
+.process-card .icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    background:linear-gradient(135deg,#4F8CFF,#7C3AED);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+}
+.process-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.process-card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+@media(max-width:991px){
+
+.process-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
