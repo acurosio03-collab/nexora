@@ -520,3 +520,104 @@ box-shadow:
 0 0 60px #22D3EE;
 
 }
+/*==============================
+TRUSTED
+==============================*/
+
+.trusted{
+
+    padding:120px 0;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-header span{
+
+    color:#4F8CFF;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+}
+
+.section-header h2{
+
+    font-size:48px;
+
+    margin-top:18px;
+
+}
+.trusted-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:25px;
+
+}
+.trusted-item{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:24px;
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+
+}
+.trusted-item img{
+
+    width:120px;
+
+    opacity:.5;
+
+    filter:grayscale(100%);
+
+    transition:.4s;
+
+}
+.trusted-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#4F8CFF;
+
+}
+.trusted-item:hover img{
+
+    opacity:1;
+
+    filter:none;
+
+}
+@media(max-width:991px){
+
+.trusted-wrapper{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
