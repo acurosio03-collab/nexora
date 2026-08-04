@@ -372,3 +372,24 @@ const counterObserver = new IntersectionObserver((entries) => {
 });
 
 counters.forEach(counter => counterObserver.observe(counter));
+gsap.utils.toArray(".testimonial-card").forEach(card=>{
+
+    gsap.from(card,{
+
+        scrollTrigger:{
+
+            trigger:card,
+
+            start:"top 85%"
+
+        },
+
+        opacity:0,
+
+        y:80,
+
+        duration:1
+
+    });
+
+});
