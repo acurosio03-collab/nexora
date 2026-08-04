@@ -474,3 +474,20 @@ gsap.from(".faq-item",{
     duration:.8
 
 });
+gsap.from(".cta-box",{
+
+    scrollTrigger:{
+
+        trigger:".cta",
+
+        start:"top 80%"
+
+    },
+
+    opacity:0,
+
+    scale:.9,
+
+    duration:1
+
+});
