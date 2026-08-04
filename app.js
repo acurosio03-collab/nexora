@@ -302,3 +302,26 @@ gsap.utils.toArray(".portfolio-card").forEach(card=>{
     });
 
 });
+gsap.utils.toArray(".process-card").forEach(card => {
+
+    gsap.from(card, {
+
+        scrollTrigger: {
+
+            trigger: card,
+
+            start: "top 85%"
+
+        },
+
+        opacity: 0,
+
+        y: 80,
+
+        duration: 0.8,
+
+        ease: "power3.out"
+
+    });
+
+});
