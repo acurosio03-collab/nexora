@@ -491,3 +491,22 @@ gsap.from(".cta-box",{
     duration:1
 
 });
+gsap.from(".footer-grid > div",{
+
+    scrollTrigger:{
+
+        trigger:".footer",
+
+        start:"top 85%"
+
+    },
+
+    opacity:0,
+
+    y:50,
+
+    stagger:.15,
+
+    duration:.8
+
+});
